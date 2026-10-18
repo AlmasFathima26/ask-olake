@@ -103,6 +103,15 @@ embedding model can download and initialize within Vercel's function size and
 execution limits. For persistent SQLite and unrestricted model startup, deploy
 the existing Docker application to a container host instead.
 
+### Deploy to Render
+
+The repository includes a `render.yaml` Blueprint for the existing Docker
+application. In Render, create a new Blueprint from this repository and provide
+`OPENROUTER_API_KEY` when prompted. The Blueprint configures `/health` as its
+health check and mounts a persistent disk for SQLite conversation history.
+Persistent disks require a paid Render instance. The embedding model is
+downloaded when the service starts, so the initial startup can take longer.
+
 ## Configure LLM
 
 For OpenRouter, set `OPENROUTER_API_KEY` in `.env`; the example file uses

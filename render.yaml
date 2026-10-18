@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ask-olake
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    disk:
+      name: ask-olake-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: ASK_OLAKE_DB
+        value: /var/data/ask_olake.db
+      - key: OPENROUTER_API_KEY
+        sync: false
