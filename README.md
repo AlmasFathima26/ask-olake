@@ -88,6 +88,21 @@ public host (Railway, Render, Fly.io, Koyeb, etc.) and set the env vars from
 `.env.example`. The endpoint `POST /ask` must be publicly reachable for
 submission.
 
+### Deploy to Vercel
+
+The root `pyproject.toml` configures Vercel to load the FastAPI application from
+`backend.main:app`. Import the repository into Vercel with the repository root as
+the project root, then set the required environment variables in the Vercel
+project settings and redeploy. Do not upload `.env`; add secrets such as
+`OPENROUTER_API_KEY` as encrypted Vercel environment variables.
+
+Vercel's function filesystem is not persistent. Conversation history uses
+SQLite by default, so it will not persist reliably on Vercel; configure a
+persistent database before relying on history endpoints. Also verify the
+embedding model can download and initialize within Vercel's function size and
+execution limits. For persistent SQLite and unrestricted model startup, deploy
+the existing Docker application to a container host instead.
+
 ## Configure LLM
 
 For OpenRouter, set `OPENROUTER_API_KEY` in `.env`; the example file uses
