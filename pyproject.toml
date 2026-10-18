@@ -1,2 +1,16 @@
+[project]
+name = "ask-olake"
+version = "1.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "sentence-transformers==5.1.0",
+    "numpy==2.3.2",
+    "requests==2.34.2",
+    "pydantic==2.11.7",
+    "python-dotenv==1.1.1",
+]
+
 [tool.vercel]
 entrypoint = "backend.main:app"
