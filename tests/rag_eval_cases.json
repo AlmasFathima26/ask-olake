@@ -1,0 +1,175 @@
+[
+  {
+    "question": "How do I start the OLake UI quickstart?",
+    "expected_source": "https://olake.io/docs/getting-started/quickstart/",
+    "expected_title": "OLake UI Quickstart",
+    "required_terms": ["docker compose", "localhost:8000"]
+  },
+  {
+    "question": "What are the Docker prerequisites for OLake's UI quickstart?",
+    "expected_source": "https://olake.io/docs/getting-started/quickstart/",
+    "expected_title": "OLake UI Quickstart",
+    "required_terms": ["Docker Compose", "4 GB RAM", "Port 8000"]
+  },
+  {
+    "question": "What are the default OLake UI login credentials?",
+    "expected_source": "https://olake.io/docs/getting-started/quickstart/",
+    "expected_title": "OLake UI Quickstart",
+    "required_terms": ["admin", "password"]
+  },
+  {
+    "question": "Which source connectors does OLake support?",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "OLake Go Sources and Sync Modes",
+    "required_terms": ["PostgreSQL", "MySQL", "MongoDB", "Apache Kafka", "DB2", "MSSQL", "S3"]
+  },
+  {
+    "question": "What sync modes are supported by the PostgreSQL connector?",
+    "expected_source": "https://olake.io/docs/connectors/postgres/",
+    "expected_title": "PostgreSQL Connector",
+    "required_terms": ["PostgreSQL", "Full Refresh + CDC", "CDC Only", "Full Refresh + Incremental"]
+  },
+  {
+    "question": "Which PostgreSQL logical decoding plugin should OLake use?",
+    "expected_source": "https://olake.io/docs/connectors/postgres/",
+    "expected_title": "PostgreSQL Connector",
+    "required_terms": ["pgoutput", "wal2json", "deprecated"]
+  },
+  {
+    "question": "What must be configured in PostgreSQL for OLake CDC?",
+    "expected_source": "https://olake.io/docs/connectors/postgres/",
+    "expected_title": "PostgreSQL Connector",
+    "required_terms": ["replication slot", "publication"]
+  },
+  {
+    "question": "What sync mode does OLake Kafka support?",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "OLake Go Sources and Sync Modes",
+    "required_terms": ["Apache Kafka", "CDC Only"]
+  },
+  {
+    "question": "What Kafka version and topic retention does OLake require?",
+    "expected_source": "https://olake.io/docs/connectors/kafka/",
+    "expected_title": "Kafka Connector",
+    "required_terms": ["Kafka 2.4.0 or newer", "retention period"]
+  },
+  {
+    "question": "Which Iceberg catalogs integrate with OLake?",
+    "expected_source": "https://olake.io/docs/understanding/compatibility-catalogs/",
+    "expected_title": "OLake Destinations and Iceberg Catalogs",
+    "required_terms": ["AWS Glue", "Hive Metastore", "Nessie", "Polaris", "JDBC"]
+  },
+  {
+    "question": "Where can OLake write plain Parquet output?",
+    "expected_source": "https://olake.io/docs/understanding/compatibility-catalogs/",
+    "expected_title": "OLake Destinations and Iceberg Catalogs",
+    "required_terms": ["Amazon S3", "MinIO", "Google Cloud Storage", "local filesystems"]
+  },
+  {
+    "question": "What table problems does OLake Fusion maintenance address?",
+    "expected_source": "https://olake.io/docs/fusion/getting-started/overview/",
+    "expected_title": "OLake Fusion Overview",
+    "required_terms": ["small files", "delete files", "query performance"]
+  },
+  {
+    "question": "Why should OLake compact files for streaming or CDC workloads?",
+    "expected_source": "https://olake.io/blog/apache-iceberg-table-maintenance-olake-fusion/",
+    "expected_title": "Apache Iceberg Maintenance Made Easier with OLake Fusion",
+    "required_terms": ["small files", "streaming ingestion", "compaction", "delete files"]
+  },
+  {
+    "question": "What happens when OLake crashes after an Iceberg write but before saving its checkpoint?",
+    "expected_source": "https://olake.io/blog/exactly-once-delivery-iceberg/",
+    "expected_title": "Checkpoint Recovery After an OLake Sync Interruption",
+    "required_terms": ["state.json", "progress marker", "repairs the checkpoint"]
+  },
+  {
+    "question": "How can PostgreSQL CDC be configured in OLake to capture the right tables?",
+    "expected_source": "https://olake.io/docs/connectors/postgres/",
+    "expected_title": "PostgreSQL Connector",
+    "required_terms": ["pgoutput", "replication slot", "publication", "include the tables"]
+  },
+  {
+    "question": "What does OLake do if a Kafka topic deletes messages before a sync reads them?",
+    "expected_source": "https://olake.io/docs/connectors/kafka/",
+    "expected_title": "Kafka Connector",
+    "required_terms": ["retention period", "cannot access or sync messages", "sync schedule"]
+  },
+  {
+    "question": "How does OLake resume an interrupted sync from a checkpoint?",
+    "expected_source": "https://olake.io/blog/exactly-once-delivery-iceberg/",
+    "expected_title": "Checkpoint Recovery After an OLake Sync Interruption",
+    "required_terms": ["state.json", "Iceberg marker", "without re-reading the source"]
+  },
+  {
+    "question": "Which OLake sync modes resume after an interruption?",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "Stateful, Resumable Syncs",
+    "required_terms": ["Full Refresh + CDC", "Full Refresh + Incremental & Strict CDC"]
+  },
+  {
+    "question": "What sync modes does Oracle Database support in OLake?",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "OLake Go Sources and Sync Modes",
+    "required_terms": ["Oracle Database", "Full Refresh", "Full Refresh + Incremental"]
+  },
+  {
+    "question": "What happens when a new column is added to a source OLake syncs?",
+    "expected_source": "https://olake.io/docs/features/schema/",
+    "expected_title": "OLake Schema Evolution",
+    "required_terms": ["schema discovery", "automatically adds", "without requiring user action"]
+  },
+  {
+    "question": "What is the chemical composition of the moon?",
+    "expected_source": null,
+    "required_terms": []
+  },
+  {
+    "question": "What is the stock price today?",
+    "expected_source": null,
+    "required_terms": []
+  },
+  {
+    "question": "Does OLake support Teradata as a source connector?",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "OLake Go Sources and Sync Modes",
+    "required_terms": ["PostgreSQL", "Apache Kafka", "S3"]
+  },
+  {
+    "question": "Which OLake sync mode should I choose?",
+    "expected_behavior": "Do not recommend one mode without the source connector and workload requirements.",
+    "expected_source": "https://olake.io/docs/",
+    "expected_title": "Sync Modes",
+    "required_terms": ["depend on the source connector", "connector-specific documentation"]
+  },
+  {
+    "question": "Which data sources and catalogs does OLake support?",
+    "expected_sources": [
+      {
+        "source": "https://olake.io/docs/",
+        "title": "OLake Go Sources and Sync Modes",
+        "required_terms": ["PostgreSQL", "MySQL", "MongoDB", "Oracle Database", "Apache Kafka", "DB2", "MSSQL", "S3"]
+      },
+      {
+        "source": "https://olake.io/docs/understanding/compatibility-catalogs/",
+        "title": "OLake Destinations and Iceberg Catalogs",
+        "required_terms": ["AWS Glue", "Apache Hive Metastore", "Nessie", "Polaris", "Unity Catalog", "Lakekeeper", "JDBC"]
+      }
+    ]
+  },
+  {
+    "question": "For PostgreSQL CDC after a crash, which plugin is preferred and how does recovery avoid duplicate writes?",
+    "expected_sources": [
+      {
+        "source": "https://olake.io/docs/connectors/postgres/",
+        "title": "PostgreSQL Connector",
+        "required_terms": ["pgoutput", "wal2json", "deprecated"]
+      },
+      {
+        "source": "https://olake.io/blog/exactly-once-delivery-iceberg/",
+        "title": "Checkpoint Recovery After an OLake Sync Interruption",
+        "required_terms": ["checkpoint", "duplicate"]
+      }
+    ]
+  }
+]

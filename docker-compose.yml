@@ -1,0 +1,16 @@
+services:
+  ask-olake:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ASK_OLAKE_DB=/app/backend/data/ask_olake.db
+    volumes:
+      - ask-olake-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  ask-olake-data:
